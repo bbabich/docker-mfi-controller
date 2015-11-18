@@ -2,9 +2,10 @@ FROM debian
 
 ENV MFI_VERSION=2.1.11
 
-RUN apt-get -y update \
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf\
+	&& apt-get -y update \
 	&& DEBIAN_FRONTEND=noninteractive \
-		apt-get install -y -q --no-install-recommends mongodb-server unzip openjdk-7-jre
+	apt-get install -y -q --no-install-recommends mongodb-server unzip openjdk-7-jre
 
 ADD https://www.ubnt.com/downloads/mfi/$MFI_VERSION/mFi.unix.zip /
 
