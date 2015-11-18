@@ -1,10 +1,10 @@
-FROM java:7-jre
+FROM debian
 
 ENV MFI_VERSION=2.1.11
 
 RUN apt-get -y update \
 	&& DEBIAN_FRONTEND=noninteractive \
-		apt-get install -y -q --no-install-recommends mongodb-server unzip
+		apt-get install -y -q --no-install-recommends mongodb-server unzip openjdk-7-jre
 
 ADD https://www.ubnt.com/downloads/mfi/$MFI_VERSION/mFi.unix.zip /
 
