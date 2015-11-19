@@ -19,4 +19,4 @@ VOLUME ["/mFi/data"]
 
 WORKDIR /mFi
 
-CMD ["java", "-jar", "lib/ace.jar", "start"]
+CMD ["java", "-jar", "/mFi/lib/ace.jar", "start"]
