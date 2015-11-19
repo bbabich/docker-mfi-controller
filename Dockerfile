@@ -1,6 +1,6 @@
 FROM debian
 
-ENV MFI_VERSION=2.1.12
+ENV MFI_VERSION=2.1.11
 
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf\
 	&& apt-get -y update \
